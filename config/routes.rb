@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   get '/contact', to: 'homes#contact'
   
   resources :users
-  
+  resources :microposts, only: [:create, :destroy]
   
 end

@@ -3,25 +3,25 @@
 <div class="top-image">
 
 <% if user_signed_in? %>
-  <!--<div class="row">-->
-  <!--  <aside class="col-md-4">-->
-  <!--    <section class="user_info">-->
-  <!--      <%#= render 'shared/user_info' %>-->
-  <!--    </section>-->
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'users/shared/user_info' %>
+      </section>
       
   <!--    <section class="stats">-->
   <!--      <%#= render 'shared/stats' %>-->
   <!--    </section>-->
       
-  <!--    <section class="micropost_form">-->
-  <!--      <%#= render 'shared/micropost_form' %>-->
-  <!--    </section>-->
-  <!--  </aside>-->
-  <!--  <div class="col-md-8">-->
-  <!--    <h3>Micropost Feed</h3>-->
-  <!--    <%#= render 'shared/feed' %>-->
-  <!--  </div>-->
-  <!--</div>-->
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'users/shared/feed' %>
+    </div>
+  </div>
 <% else %>
 <!--<%#= image_tag asset_path('top.jpg'), class: 'top-image' %>-->
 
