@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  # get 'users/index'
   
   devise_scope :user do
     root 'homes#top'
@@ -11,13 +10,17 @@ Rails.application.routes.draw do
     registrations:  'users/registrations'
   }
   
-  #root 'homes#top'
   
   get '/help' ,   to: 'homes#help'
   get '/about',   to: 'homes#about'
   get '/contact', to: 'homes#contact'
   
-  resources :users
-  resources :microposts, only: [:create, :destroy]
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   
+  resources :microposts,    only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 end

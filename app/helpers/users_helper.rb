@@ -1,5 +1,10 @@
 module UsersHelper
   
+  def current_user?(user)
+    #nilガード
+    user && user == current_user
+  end
+  
    # 渡されたユーザーのGravatar画像を返す
   def gravatar_for(user, options = { size: 80 })
     size         = options[:size]
