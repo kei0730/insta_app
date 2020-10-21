@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/about',   to: 'homes#about'
   get '/contact', to: 'homes#contact'
   
+  get '/service', to: 'users#service'
+  
   resources :users do
     member do
       get :following, :followers

@@ -32,6 +32,9 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
   
+  def service
+  end
+  
   private
   
   # 管理者かどうか確認
