@@ -18,8 +18,10 @@ gem 'turbolinks',                 '5.2.0'
 gem 'jbuilder',                   '2.9.1'
 gem 'bootsnap',                   '1.4.5', require: false
 gem 'devise'
-# gem 'bootstrap'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'jquery-rails'
+gem 'mini_racer'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'
