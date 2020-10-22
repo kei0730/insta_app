@@ -1,7 +1,7 @@
 # メインのサンプルユーザーを1人作成する
 User.create!(name:                  "admin User",
              username:              "admin User",
-             email:                 "admin@railstutorial.org",
+             email:                 "admin@instaapp.org",
              password:              "adminuser",
              password_confirmation: "adminuser",
              admin:                 true
